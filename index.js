@@ -1,18 +1,26 @@
 import {NativeModules, Platform, ActionSheetIOS} from 'react-native';
+import PropTypes from 'prop-types';
 
-const {RNActionSheet} = NativeModules;
+const {RNActionsheet} = NativeModules;
 
 const ActionSheet = (props, callback) => {
-  const {options, title, destructiveButtonIndex, cancelButtonIndex} = props;
+  const {optionsIOS, optionsAndroid, title, destructiveButtonIndex, cancelButtonIndex} = props;
   if(Platform.OS === "ios") {
     ActionSheetIOS.showActionSheetWithOptions({
       title                 : title,
-      options               : options,
+      options               : optionsIOS,
       destructiveButtonIndex: destructiveButtonIndex,
       cancelButtonIndex     : cancelButtonIndex
     }, callback)
   } else {
-    RNActionSheet.show(title, options, callback)
+    RNActionsheet.show(title, optionsAndroid, callback)
   }
 };
+ActionSheet.propTypes = {
+  optionsIOS            : PropTypes.array.isRequired,
+  optionsAndroid        : PropTypes.array.isRequired,
+  title                 : PropTypes.string.isRequired,
+  destructiveButtonIndex: PropTypes.number,
+  cancelButtonIndex     : PropTypes.number,
+}
 export default ActionSheet;

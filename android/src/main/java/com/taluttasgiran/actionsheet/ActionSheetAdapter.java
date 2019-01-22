@@ -1,4 +1,4 @@
-packagecom.taluttasgiran.actionsheet;
+package com.taluttasgiran.actionsheet;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.taluttasgiran.actionsheet.R;
 import com.facebook.react.bridge.Callback;
 
 public class ActionSheetAdapter extends RecyclerView.Adapter<ActionSheetAdapter.MyViewHolder> {

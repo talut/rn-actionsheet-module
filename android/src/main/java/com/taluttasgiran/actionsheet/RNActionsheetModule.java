@@ -1,21 +1,20 @@
-
 package com.taluttasgiran.actionsheet;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableArray;
 
 public class RNActionsheetModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
-  private ActionSheet actionSheet;
+    private final ReactApplicationContext reactContext;
+    private ActionSheet actionSheet;
 
-  public RNActionsheetModule(ReactApplicationContext reactContext) {
-    super(reactContext);
-    this.reactContext = reactContext;
-  }
-
+    RNActionsheetModule(ReactApplicationContext reactContext) {
+        super(reactContext);
+        this.reactContext = reactContext;
+    }
 
     @ReactMethod
     public void show(String title, ReadableArray items, final Callback onClickCallback) {
@@ -32,8 +31,8 @@ public class RNActionsheetModule extends ReactContextBaseJavaModule {
         actionSheet.hide();
     }
 
-  @Override
-  public String getName() {
-    return "RNActionsheet";
-  }
+    @Override
+    public String getName() {
+        return "RNActionsheet";
+    }
 }
