@@ -1,0 +1,31 @@
+{
+  "name": "rn-actionsheet",
+  "version": "0.0.1",
+  "description": "React Native Action Sheet for Android & IOS (for IOS ActionSheetIOS)",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "actionsheet",
+    "action",
+    "sheet",
+    "bottomsheetdialog",
+    "bottombehaivor",
+    "ActionSheetIOS",
+    "native"
+  ],
+  "author": "Talut TASGIRAN",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.57.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talut/rn-actionsheet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/talut/rn-actionsheet/issues"
+  },
+  "homepage": "https://github.com/talut/rn-actionsheet#readme"
+}
