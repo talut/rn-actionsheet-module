@@ -1,5 +1,6 @@
 import {NativeModules, Platform, ActionSheetIOS} from 'react-native';
 import PropTypes from 'prop-types';
+
 const {RNActionsheet} = NativeModules;
 
 const ActionSheet = (props, callback) => {
@@ -8,7 +9,7 @@ const ActionSheet = (props, callback) => {
     ActionSheetIOS.showActionSheetWithOptions({
       title                 : title,
       options               : optionsIOS,
-      destructiveButtonIndex: destructiveButtonIndex,
+      destructiveButtonIndex: destructiveButtonIndex === null ? undefined : destructiveButtonIndex,
       cancelButtonIndex     : cancelButtonIndex
     }, callback)
   } else {
