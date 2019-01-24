@@ -1,5 +1,5 @@
 # React Native ActionSheet
-With this package you can easily use picker with onPress function.
+With this package you can use ActionSheet. Usage of this package is same as both IOS and Android. Also usage of package is same as [ActionSheetIOS](https://facebook.github.io/react-native/docs/actionsheetios)
 
 Also this package is workaround for Android Picker problem (https://github.com/facebook/react-native/issues/15556). 
 
