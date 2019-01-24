@@ -1,6 +1,5 @@
 import {NativeModules, Platform, ActionSheetIOS} from 'react-native';
 import PropTypes from 'prop-types';
-
 const {RNActionsheet} = NativeModules;
 
 const ActionSheet = (props, callback) => {
@@ -22,5 +21,5 @@ ActionSheet.propTypes = {
   title                 : PropTypes.string.isRequired,
   destructiveButtonIndex: PropTypes.number,
   cancelButtonIndex     : PropTypes.number,
-}
+};
 export default ActionSheet;

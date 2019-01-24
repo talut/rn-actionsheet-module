@@ -1,6 +1,6 @@
 {
   "name": "rn-actionsheet-module",
-  "version": "0.0.4",
+  "version": "0.0.",
   "description": "React Native Action Sheet for Android & IOS (for IOS ActionSheetIOS)",
   "main": "index.js",
   "keywords": [
