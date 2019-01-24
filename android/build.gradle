@@ -31,7 +31,7 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation "com.android.support:design:+"
+    implementation "com.android.support:design:27.1.1"
 
 }
   

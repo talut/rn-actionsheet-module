@@ -1,7 +1,7 @@
 {
   "name": "rn-actionsheet-module",
-  "version": "0.0.",
-  "description": "React Native Action Sheet for Android & IOS (for IOS ActionSheetIOS)",
+  "version": "0.0.5",
+  "description": "React Native ActionSheet for Android (BottomSheetDialog) & IOS (ActionSheetIOS)",
   "main": "index.js",
   "keywords": [
     "react-native",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/talut/rn-actionsheet.git"
+    "url": "git+https://github.com/talut/rn-actionsheet-module.git"
   },
   "bugs": {
-    "url": "https://github.com/talut/rn-actionsheet/issues"
+    "url": "https://github.com/talut/rn-actionsheet-module/issues"
   },
-  "homepage": "https://github.com/talut/rn-actionsheet#readme"
+  "homepage": "https://github.com/talut/rn-actionsheet-module#readme"
 }
