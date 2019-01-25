@@ -51,8 +51,9 @@ import ActionSheet from 'rn-actionsheet-module'
        {
           title             : "Lorem ipsum",
           optionsIOS        : ["Cancel", "From Gallery", "From Camera"],
-          optionsAndroid    : ["From Gallery", "From Camera"],
-          cancelButtonIndex : 0
+          optionsAndroid        : ["From Gallery", "From Camera"],
+          destructiveButtonIndex: null, // undefined // 1, 2, etc.,
+          cancelButtonIndex     : 0
        }, (index) => {
         alert(index)
        }
