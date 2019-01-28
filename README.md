@@ -59,7 +59,20 @@ import ActionSheet from 'rn-actionsheet-module'
           cancelButtonIndex     : 0, // 
           onCancelAndroidIndex: 3 // android doesn't need any cancel option but back button or outside click will return onCancelAndroidIndex
        }, (index) => {
-        alert(index)
+        switch (index) {
+         case Platform.OS === "ios" ? 1 : 0 :{
+           alert("From Camera clicked")
+         }
+         case Platform.OS === "ios" ? 2 : 1 :{
+           alert("From Camera clicked")
+         }
+         case Platform.OS === "ios" ? 0 : 3 :{
+           alert("onCancel")
+         }
+         default:{
+           alert("Default")
+         }
+        }
        }
    )
 }}>
