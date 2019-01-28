@@ -15,7 +15,7 @@ import com.facebook.react.bridge.Callback;
 public class ActionSheet extends BottomSheetDialog {
     BottomSheetDialog mBottomSheetDialog;
 
-    ActionSheet(@NonNull Context context, String title, String[] options, Callback onClickCallback) {
+    ActionSheet(@NonNull Context context, String title, String[] options, Callback onClickCallback,final int cancelIndex,) {
         super(context);
         View sheetView = this.getLayoutInflater().inflate(R.layout.action_sheet, null);
         RecyclerView mRecyclerView = (RecyclerView) sheetView.findViewById(R.id.list);
@@ -28,6 +28,13 @@ public class ActionSheet extends BottomSheetDialog {
         if (sheetView.getParent() != null) {
             ((ViewGroup) sheetView.getParent()).removeView(sheetView); // <- fix
         }
+
+        mBottomSheetDialog.setOnCancelListener(new OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+               onClickCallback.invoke(cancelIndex)
+            }
+        });
 
         TextView tvTitle = (TextView) sheetView.findViewById(R.id.title);
         tvTitle.setText(title);

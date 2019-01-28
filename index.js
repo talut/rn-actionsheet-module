@@ -13,7 +13,7 @@ const ActionSheet = (props, callback) => {
       cancelButtonIndex     : cancelButtonIndex
     }, callback)
   } else {
-    RNActionsheet.show(title, optionsAndroid, callback)
+    RNActionsheet.show(title, optionsAndroid, callback, cancelButtonIndex)
   }
 };
 ActionSheet.propTypes = {

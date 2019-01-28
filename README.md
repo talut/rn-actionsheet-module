@@ -39,8 +39,10 @@ react-native link rn-actionsheet-module
 |optionsAndroid         |array |**Yes**   |Android     |
 |title                  |string|**Yes**   |Android, IOS|
 |destructiveButtonIndex |object|No        |IOS         |
-|cancelButtonIndex      |func  |No        |IOS         |
+|cancelButtonIndex      |func  |No        |Android, IOS|
 
+##### With v0.2.0
+_Android doesn't need any cancel option but back button or outside click will return cancelButtonIndex._
 ## Usage
 
 ```javascript
@@ -53,7 +55,7 @@ import ActionSheet from 'rn-actionsheet-module'
           optionsIOS        : ["Cancel", "From Gallery", "From Camera"],
           optionsAndroid        : ["From Gallery", "From Camera"],
           destructiveButtonIndex: null, // undefined // 1, 2, etc.,
-          cancelButtonIndex     : 0
+          cancelButtonIndex     : 0 // android doesn't need any cancel option but back button or outside click will return cancelButtonIndex
        }, (index) => {
         alert(index)
        }

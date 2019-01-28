@@ -17,12 +17,12 @@ public class RNActionsheetModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void show(String title, ReadableArray items, final Callback onClickCallback) {
+    public void show(String title, ReadableArray items, final Callback onClickCallback, int cancelIndex) {
         final String[] labels = new String[items.size()];
         for (int i = 0; i < items.size(); i++) {
             labels[i] = items.getString(i);
         }
-        actionSheet = new ActionSheet(getCurrentActivity(), title, labels, onClickCallback);
+        actionSheet = new ActionSheet(getCurrentActivity(), title, labels, onClickCallback, cancelIndex);
         actionSheet.show();
     }
 
