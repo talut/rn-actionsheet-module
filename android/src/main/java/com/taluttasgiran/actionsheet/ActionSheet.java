@@ -1,6 +1,7 @@
 package com.taluttasgiran.actionsheet;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ import com.facebook.react.bridge.Callback;
 public class ActionSheet extends BottomSheetDialog {
     BottomSheetDialog mBottomSheetDialog;
 
-    ActionSheet(@NonNull Context context, String title, String[] options, Callback onClickCallback,final int cancelIndex,) {
+    ActionSheet(@NonNull Context context, String title, String[] options, final int cancelIndex, final Callback onClickCallback) {
         super(context);
         View sheetView = this.getLayoutInflater().inflate(R.layout.action_sheet, null);
         RecyclerView mRecyclerView = (RecyclerView) sheetView.findViewById(R.id.list);
@@ -32,7 +33,7 @@ public class ActionSheet extends BottomSheetDialog {
         mBottomSheetDialog.setOnCancelListener(new OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-               onClickCallback.invoke(cancelIndex)
+               onClickCallback.invoke(cancelIndex);
             }
         });
 
