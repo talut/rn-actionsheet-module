@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 const {RNActionsheet} = NativeModules;
 
 const ActionSheet = (props, callback) => {
-  const {optionsIOS, optionsAndroid, title, destructiveButtonIndex, cancelButtonIndex} = props;
+  const {optionsIOS, optionsAndroid, title, destructiveButtonIndex, cancelButtonIndex, onCancelAndroidIndex} = props;
   if(Platform.OS === "ios") {
     ActionSheetIOS.showActionSheetWithOptions({
       title                 : title,
       options               : optionsIOS,
       destructiveButtonIndex: destructiveButtonIndex === null ? undefined : destructiveButtonIndex,
-      cancelButtonIndex     : cancelButtonIndex
+      cancelButtonIndex     : cancelButtonIndex,
     }, callback)
   } else {
-    RNActionsheet.show(title, optionsAndroid, callback, cancelButtonIndex)
+    RNActionsheet.show(title, optionsAndroid, callback, onCancelAndroidIndex)
   }
 };
 ActionSheet.propTypes = {
@@ -22,5 +22,6 @@ ActionSheet.propTypes = {
   title                 : PropTypes.string.isRequired,
   destructiveButtonIndex: PropTypes.number,
   cancelButtonIndex     : PropTypes.number,
+  onCancelAndroidIndex  : PropTypes.number.isRequired,
 };
 export default ActionSheet;
