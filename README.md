@@ -38,6 +38,7 @@ react-native link rn-actionsheet-module
 |optionsIOS             |array |**Yes**   |IOS         |
 |optionsAndroid         |array |**Yes**   |Android     |
 |title                  |string|**Yes**   |Android, IOS|
+|message                |string|No        |IOS         |    
 |destructiveButtonIndex |number|No        |IOS         |
 |cancelButtonIndex      |number|No        |IOS         |
 |onCancelAndroidIndex   |number|**Yes**   |Android     |
