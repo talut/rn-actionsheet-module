@@ -1,6 +1,6 @@
 {
   "name": "rn-actionsheet-module",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "React Native ActionSheet for Android (BottomSheetDialog) & IOS (ActionSheetIOS)",
   "main": "index.js",
   "keywords": [
@@ -9,6 +9,7 @@
     "android",
     "actionsheet",
     "action",
+    "androidx",
     "sheet",
     "bottomsheetdialog",
     "bottombehaivor",
@@ -18,8 +19,8 @@
   "author": "Talut TASGIRAN",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.58.0",
-    "prop-types": "^15.6.2"
+    "react-native": "0.60.5",
+    "prop-types": "^15.7.2"
   },
   "repository": {
     "type": "git",
