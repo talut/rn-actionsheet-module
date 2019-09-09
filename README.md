@@ -63,20 +63,20 @@ import ActionSheet from 'rn-actionsheet-module'
    ActionSheet(
        {
           title             : "Lorem ipsum",
-          optionsIOS        : ["Cancel", "From Gallery", "From Camera"],
+          optionsIOS        : ["From Gallery", "From Camera", "Cancel"],
           optionsAndroid        : ["From Gallery", "From Camera"],
           destructiveButtonIndex: null, // undefined // 1, 2, etc.,
-          cancelButtonIndex     : 0, // 
-          onCancelAndroidIndex: 3 // android doesn't need any cancel option but back button or outside click will return onCancelAndroidIndex
+          cancelButtonIndex     : 0, //
+          onCancelAndroidIndex: 2 // android doesn't need any cancel option but back button or outside click will return onCancelAndroidIndex
        }, (index) => {
         switch (index) {
-         case Platform.OS === "ios" ? 1 : 0 :{
+         case 0: {
            alert("From Camera clicked")
          }
-         case Platform.OS === "ios" ? 2 : 1 :{
+         case 1: {
            alert("From Camera clicked")
          }
-         case Platform.OS === "ios" ? 0 : 3 :{
+         case 2: {
            alert("onCancel")
          }
          default:{
