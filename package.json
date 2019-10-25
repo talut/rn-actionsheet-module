@@ -20,7 +20,7 @@
   "author": "Talut TASGIRAN",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "0.60.5",
+    "react-native": "^0.61.2",
     "prop-types": "^15.7.2"
   },
   "repository": {
