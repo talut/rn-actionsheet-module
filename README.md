@@ -7,10 +7,10 @@ Using [`ActionSheetIOS`](https://facebook.github.io/react-native/docs/actionshee
 
 <img src="./docs/rn-actionsheet-module-android.png"> <img src="./docs/rn-actionsheet-module-ios.png">
 
-### v1.0.0 now has AndroidX support. If you want to use this package without AndroidX support please use v0.2.3
+### Version >= 1.0.0 now has AndroidX support. If you want to use this package without AndroidX support please use v0.2.3
 #### Facebook RN blog post about v0.60 and AndroidX support: [https://facebook.github.io/react-native/blog/2019/07/03/version-60](https://facebook.github.io/react-native/blog/2019/07/03/version-60)
 
-### Version 1.0.0
+### Version 1.0.1
 - AndroidX support added.
 
 ## Getting Started

@@ -13,36 +13,25 @@ public class ActionSheetAdapter extends RecyclerView.Adapter<ActionSheetAdapter.
     private String[] mDataset;
     private Callback callback;
     private ActionSheet actionSheet;
-
-    // Provide a reference to the views for each data item
-// Complex data items may need more than one view per item, and
-// you provide access to all the views for a data item in a view holder
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         public LinearLayout linearLayout;
-
         public MyViewHolder(LinearLayout v) {
             super(v);
             linearLayout = v;
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
     public ActionSheetAdapter(String[] myDataset, Callback onClickCallback, ActionSheet actionSheetC) {
         mDataset = myDataset;
         callback = onClickCallback;
         actionSheet = actionSheetC;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ActionSheetAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
                                                               int viewType) {
-
-        // create a new view
         LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.action_item, parent, false);
-
         MyViewHolder vh = new MyViewHolder(linearLayout);
         return vh;
     }
@@ -51,7 +40,6 @@ public class ActionSheetAdapter extends RecyclerView.Adapter<ActionSheetAdapter.
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         Button button = (Button) holder.linearLayout.findViewById(R.id.btn);
         button.setText(mDataset[position]);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +47,6 @@ public class ActionSheetAdapter extends RecyclerView.Adapter<ActionSheetAdapter.
                 actionSheet.hide();
             }
         });
-
     }
 
     @Override

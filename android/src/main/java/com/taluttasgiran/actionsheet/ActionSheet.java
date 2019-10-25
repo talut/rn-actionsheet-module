@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.taluttasgiran.actionsheet.R;
 import com.facebook.react.bridge.Callback;
 
@@ -19,7 +18,7 @@ public class ActionSheet extends BottomSheetDialog {
     ActionSheet(@NonNull Context context, String title, String[] options, final int cancelIndex, final Callback onClickCallback) {
         super(context);
         View sheetView = this.getLayoutInflater().inflate(R.layout.action_sheet, null);
-        RecyclerView mRecyclerView = (RecyclerView) sheetView.findViewById(R.id.list);
+        RecyclerView mRecyclerView = sheetView.findViewById(R.id.list);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
         mRecyclerView.setLayoutManager(mLayoutManager);
