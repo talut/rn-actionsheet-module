@@ -7,15 +7,12 @@ import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableArray;
 
 public class RNActionsheetModule extends ReactContextBaseJavaModule {
-
     private final ReactApplicationContext reactContext;
     private ActionSheet actionSheet;
-
     RNActionsheetModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
-
     @ReactMethod
     public void show(String title, ReadableArray items, int cancelIndex, final Callback onClickCallback) {
         final String[] labels = new String[items.size()];
