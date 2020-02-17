@@ -1,8 +1,8 @@
 {
   "name": "rn-actionsheet-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native ActionSheet for Android (BottomSheetDialog) & IOS (ActionSheetIOS)",
-  "publishConfig": {"registry": "https://npm.pkg.github.com/@talut"},
+  "publishConfigg": {"registry": "https://npm.pkg.github.com/@talut"},
   "main": "index.js",
   "keywords": [
     "react-native",
