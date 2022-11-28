@@ -1,26 +1,33 @@
 package com.taluttasgiran.actionsheet;
 
+import android.app.Activity;
+
+import androidx.annotation.Nullable;
+
+import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableArray;
 
 public class RNActionsheetModule extends ReactContextBaseJavaModule {
-    private final ReactApplicationContext reactContext;
     private ActionSheet actionSheet;
+
     RNActionsheetModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        this.reactContext = reactContext;
     }
+
     @ReactMethod
-    public void show(String title, ReadableArray items, int cancelIndex, final Callback onClickCallback) {
+    public void show(String title, ReadableArray items, int cancelIndex, @Nullable String tintColor, @Nullable String backgroundColor, final Callback onClickCallback) {
         final String[] labels = new String[items.size()];
         for (int i = 0; i < items.size(); i++) {
             labels[i] = items.getString(i);
         }
-        actionSheet = new ActionSheet(getCurrentActivity(), title, labels, cancelIndex, onClickCallback);
-        actionSheet.show();
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            actionSheet = new ActionSheet(activity, title, labels, cancelIndex, tintColor, backgroundColor, onClickCallback);
+            actionSheet.show();
+        }
     }
 
     @ReactMethod
