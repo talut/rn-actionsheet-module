@@ -5,28 +5,40 @@
 
 declare module "rn-actionsheet-module" {
 
-    interface ActionSheetProps {
-        optionsIOS: string[],
-        optionsAndroid: string[],
-        title: string,
-        message: string,
-        tintColor?: string,
-        destructiveButtonIndex?: number,
-        cancelButtonIndex?: number,
-        onCancelAndroidIndex: number,
-    }
+  /**
+   * Props for ActionSheet
+   * @interface ActionSheetProps
+   * @property {string[]} optionsIOS - Options for iOS
+   * @property {string[]} optionsAndroid - Options for Android
+   * @property {string} title - Title of ActionSheet
+   * @property {string} message - Message of ActionSheet
+   * @property {string} [tintColor] - Tint color of ActionSheet
+   * @property {string} [backgroundColor] - Background color of ActionSheet (Android only)
+   * @property {number} [destructiveButtonIndex] - Index of destructive button
+   * @property {number} [cancelButtonIndex] - Index of cancel button
+   * @property {number} onCancelAndroidIndex - Index of cancel button for Android
+   */
+  interface ActionSheetProps {
+    optionsIOS: string[],
+    optionsAndroid: string[],
+    title: string,
+    message?: string,
+    tintColor?: string,
+    backgroundColor?: string,
+    destructiveButtonIndex?: number | null,
+    cancelButtonIndex?: number,
+    onCancelAndroidIndex: number,
+  }
 
-    interface ActionSheetCallback {
-        (index: number): void
-    }
+  /**
+   * Callback function for action sheet
+   * @param index Index of selected option
+   */
+  interface ActionSheetOnSelect {
+    (index: number): void;
+  }
 
-    interface IActionSheet {
-        props: ActionSheetProps,
-        callback: ActionSheetCallback
-    }
-
-
-    const ActionSheet: IActionSheet
-    export default ActionSheet
+  const ActionSheet: (props: ActionSheetProps, onSelect: ActionSheetOnSelect) => void;
+  export default ActionSheet;
 }
 

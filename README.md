@@ -7,8 +7,10 @@ Using [`ActionSheetIOS`](https://facebook.github.io/react-native/docs/actionshee
 
 <img src="./docs/rn-actionsheet-module-android.png"> <img src="./docs/rn-actionsheet-module-ios.png">
 
-### Version >= 1.0.0 now has AndroidX support. If you want to use this package without AndroidX support please use v0.2.3
-#### Facebook RN blog post about v0.60 and AndroidX support: [https://facebook.github.io/react-native/blog/2019/07/03/version-60](https://facebook.github.io/react-native/blog/2019/07/03/version-60)
+### Version 1.0.4
+- `tintColor` added for Android
+- `backgroundColor` added for Android
+
 
 ### Version 1.0.3
 - `tintColor` added for IOS
@@ -45,16 +47,17 @@ react-native link rn-actionsheet-module
 
 ## Props
 
-| Props                 | Type | Required | OS         |
-|-----------------------|------|----------|------------|
-|optionsIOS             |array |**Yes**   |IOS         |
-|optionsAndroid         |array |**Yes**   |Android     |
-|title                  |string|**Yes**   |Android, IOS|
-|message                |string|No        |IOS         |    
-|tintColor              |string|No        |IOS         |    
-|destructiveButtonIndex |number|No        |IOS         |
-|cancelButtonIndex      |number|No        |IOS         |
-|onCancelAndroidIndex   |number|**Yes**   |Android     |
+| Props                  | Type | Required | OS           |
+|------------------------|------|----------|--------------|
+| optionsIOS             |array |**Yes**   | IOS          |
+| optionsAndroid         |array |**Yes**   | Android      |
+| title                  |string|**Yes**   | Android, IOS |
+| message                |string|No        | IOS          |    
+| tintColor              |string|No        | IOS, Android |    
+| backgroundColor        |string|No        | Android      |    
+| destructiveButtonIndex |number|No        | IOS          |
+| cancelButtonIndex      |number|No        | IOS          |
+| onCancelAndroidIndex   |number|**Yes**   | Android      |
 
 ##### With v0.2.0
 _Android doesn't need any cancel option but back button or outside click will return `onCancelAndroidIndex`_

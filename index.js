@@ -8,6 +8,7 @@ const ActionSheet = (props, callback) => {
         optionsAndroid,
         title,
         tintColor,
+        backgroundColor,
         message,
         destructiveButtonIndex,
         cancelButtonIndex,
@@ -23,7 +24,7 @@ const ActionSheet = (props, callback) => {
             cancelButtonIndex: cancelButtonIndex,
         }, callback)
     } else {
-        RNActionsheet.show(title, optionsAndroid, onCancelAndroidIndex, callback)
+        RNActionsheet.show(title, optionsAndroid, onCancelAndroidIndex, tintColor, backgroundColor, callback)
     }
 };
 
