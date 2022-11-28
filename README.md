@@ -11,13 +11,6 @@ Using [`ActionSheetIOS`](https://facebook.github.io/react-native/docs/actionshee
 - `tintColor` added for Android
 - `backgroundColor` added for Android
 
-
-### Version 1.0.3
-- `tintColor` added for IOS
-
-#### Version 1.0.2
-- `implementation 'com.google.android.material:material:1.0.0'` issue solved
-
 ## Getting Started
 
 **With NPM**
