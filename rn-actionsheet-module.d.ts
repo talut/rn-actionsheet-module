@@ -1,5 +1,5 @@
-// Type definitions for react-native-wizard 2.1.1
-// Project: https://github.com/talut/react-native-wizard
+// Type definitions for rn-actionsheet-module 1.0.4
+// Project: https://github.com/talut/rn-actionsheet-module
 // Definitions by: Talut TASGIRAN <https://github.com/talut>
 // TypeScript Version: 2.8
 
@@ -17,7 +17,7 @@ declare module "rn-actionsheet-module" {
         onCancelAndroidIndex: number,
     }
 
-    const RNActionSheetModule: FunctionComponent<ActionSheetProps>
-    export default RNActionSheetModule
+    const ActionSheet: FunctionComponent<ActionSheetProps>
+    export default ActionSheet
 }
 
