@@ -4,7 +4,6 @@
 // TypeScript Version: 2.8
 
 declare module "rn-actionsheet-module" {
-    import {FunctionComponent} from "react"
 
     interface ActionSheetProps {
         optionsIOS: string[],
@@ -17,7 +16,17 @@ declare module "rn-actionsheet-module" {
         onCancelAndroidIndex: number,
     }
 
-    const ActionSheet: FunctionComponent<ActionSheetProps>
+    interface ActionSheetCallback {
+        (index: number): void
+    }
+
+    interface IActionSheet {
+        props: ActionSheetProps,
+        callback: ActionSheetCallback
+    }
+
+
+    const ActionSheet: IActionSheet
     export default ActionSheet
 }
 

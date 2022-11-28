@@ -25,6 +25,7 @@
     "type": "git",
     "url": "git://github.com/talut/rn-actionsheet-module.git"
   },
+  "types": "rn-actionsheet-module.d.ts",
   "bugs": {
     "url": "https://github.com/talut/rn-actionsheet-module/issues"
   },
